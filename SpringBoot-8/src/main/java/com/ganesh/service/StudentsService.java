@@ -1,8 +1,14 @@
 package com.ganesh.service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.ganesh.entiry.StudentDto;
 import com.ganesh.entiry.Students;
 import com.ganesh.repository.StudentsRepository;
 
@@ -14,7 +20,61 @@ public class StudentsService {
 	StudentsRepository repository;
 	
 	
-	public void saveStudent(Students student) {
+	
+	public List<StudentDto> getAllStudents() {
+		
+		 List<Students> students = repository.findAll();
+		 
+		 List<StudentDto> dto=new ArrayList<>();
+		 
+		 for (Students student : students) {
+			 
+			 StudentDto updatedStudent=new StudentDto();
+			 
+			 updatedStudent.setId(student.getId());
+		     updatedStudent.setName(student.getName());
+			 updatedStudent.setCourse(student.getCourse());
+			 updatedStudent.setGender(student.getGender());
+			 updatedStudent.setTimings(Arrays.toString(student.getTimings()));
+			 updatedStudent.setEmail(student.getEmail());
+			 updatedStudent.setMobileNo(student.getMobileNo());
+			 updatedStudent.setAddress(student.getAddress());
+			 updatedStudent.setCourseFees(student.getCourseFees());
+			 
+			dto.add(updatedStudent);
+		}
+		 return dto; 
+	}
+	
+	
+	
+	public StudentDto getById(int id) {
+		
+		Students student=null;
+		Optional<Students> op = repository.findById(id);
+		
+		if (op.isPresent()) {
+			
+			 student=op.get();
+		}
+		
+		StudentDto updatedStudent = new StudentDto();
+		
+		updatedStudent.setId(student.getId());
+		updatedStudent.setName(student.getName());
+		updatedStudent.setCourse(student.getCourse());
+		updatedStudent.setGender(student.getGender());
+		updatedStudent.setTimings(Arrays.toString(student.getTimings()));
+		updatedStudent.setEmail(student.getEmail());
+		updatedStudent.setMobileNo(student.getMobileNo());
+		updatedStudent.setAddress(student.getAddress());
+		updatedStudent.setCourseFees(student.getCourseFees());
+		
+		return updatedStudent;
+	}
+	
+	
+	public Students saveStudent(Students student) {
 		
 		if (student.getCourse().equalsIgnoreCase("Java Full Stack")) {
 			
@@ -29,7 +89,9 @@ public class StudentsService {
 			student.setCourseFees(70000.00);
 		}
 		
-		repository.save(student);
+		Students savedStudents = repository.save(student);
+		
+		return savedStudents;
 	}
 
 }
