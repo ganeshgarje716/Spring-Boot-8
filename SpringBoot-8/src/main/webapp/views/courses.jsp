@@ -240,7 +240,7 @@ body{
 
                 <p><strong>Duration:</strong> 6 Months</p>
 
-                <div class="fee">₹35,000</div>
+                <div class="fee">35,000</div>
 
                 <a href="enroll" class="btn">Enroll Now</a>
 
@@ -265,7 +265,7 @@ body{
 
                 <p><strong>Duration:</strong> 6 Months</p>
 
-                <div class="fee">₹32,000</div>
+                <div class="fee">32,000</div>
 
                 <a href="enroll" class="btn">Enroll Now</a>
 
@@ -290,7 +290,7 @@ body{
 
                 <p><strong>Duration:</strong> 8 Months</p>
 
-                <div class="fee">₹45,000</div>
+                <div class="fee">45,000</div>
 
                 <a href="enroll" class="btn">Enroll Now</a>
 
@@ -315,7 +315,7 @@ body{
 
                 <p><strong>Duration:</strong> 5 Months</p>
 
-                <div class="fee">₹30,000</div>
+                <div class="fee">30,000</div>
 
                 <a href="enroll" class="btn">Enroll Now</a>
 
@@ -340,7 +340,7 @@ body{
 
                 <p><strong>Duration:</strong> 4 Months</p>
 
-                <div class="fee">₹28,000</div>
+                <div class="fee">28,000</div>
 
                 <a href="enroll" class="btn">Enroll Now</a>
 
@@ -365,7 +365,7 @@ body{
 
                 <p><strong>Duration:</strong> 5 Months</p>
 
-                <div class="fee">₹40,000</div>
+                <div class="fee">40,000</div>
 
                 <a href="enroll" class="btn">Enroll Now</a>
 
