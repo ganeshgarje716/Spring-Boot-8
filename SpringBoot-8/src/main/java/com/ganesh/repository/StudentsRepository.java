@@ -7,4 +7,6 @@ import com.ganesh.entiry.Students;
 public interface StudentsRepository extends JpaRepository<Students, Integer>{
 	
 
+	Students findByEmailAndMobileNo(String email, String mobileNo);
+	
 }

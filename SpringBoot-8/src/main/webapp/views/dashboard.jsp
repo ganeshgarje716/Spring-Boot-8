@@ -282,8 +282,8 @@ tr:hover{
         <li><a href="/">Home</a></li>
         <li><a href="/courses">Courses</a></li>
         <li><a href="/students">Students</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/logout">Logout</a></li>
+        <li><a href="/about">Contact</a></li>
+        <li><a href="/login">Logout</a></li>
         
     </ul>
 
@@ -380,7 +380,7 @@ tr:hover{
     
     <div class="edit-section">
     <a href="/edit/${student.id}" class="edit-btn">
-        ✏ Edit Profile
+         Edit Profile
     </a>
 </div>
     

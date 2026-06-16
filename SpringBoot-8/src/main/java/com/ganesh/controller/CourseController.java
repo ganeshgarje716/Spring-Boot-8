@@ -97,5 +97,33 @@ public class CourseController {
 	}
 	
 	
+	@GetMapping("/login")
+	public String loginPage() {
+
+	    return "login";
+	}
+
+	@PostMapping("/login")
+	public String login(@RequestParam String email, @RequestParam String mobileNo, Model model) {
+
+	    Students student = service.login(email, mobileNo);
+
+	    if(student != null) {
+
+	        return "redirect:/dashboard/" + student.getId();
+	    }
+
+	    model.addAttribute("msg", "Invalid Email or Mobile Number");
+
+	    return "login";
+	}
+	
+	
+	@GetMapping("/about")
+	public String aboutPage() {
+
+	    return "about";
+	}
+	
 
 }

@@ -111,5 +111,11 @@ public class StudentsService {
 
 	    return repository.save(student);
 	}
+	
+	
+	public Students login(String email, String mobileNo) {
+
+	    return repository.findByEmailAndMobileNo(email, mobileNo);
+	}
 
 }

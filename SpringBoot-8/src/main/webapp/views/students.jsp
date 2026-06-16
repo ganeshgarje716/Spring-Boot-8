@@ -165,8 +165,8 @@ tr:hover{
         <li><a href="/">Home</a></li>
         <li><a href="/courses">Courses</a></li>
         <li><a href="/dashboard">Dashboard</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/logout">Logout</a></li>
+        <li><a href="/about">Contact</a></li>
+        <li><a href="/login">Logout</a></li>
     </ul>
 
 </nav>

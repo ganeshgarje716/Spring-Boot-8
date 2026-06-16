@@ -198,7 +198,7 @@ body{
         <li><a href="/">Home</a></li>
         <li><a href="courses">Courses</a></li>
         <li><a href="enroll">Enroll</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/about">Contact</a></li>
         <li><a href="/login">Login</a></li>
     </ul>
 
