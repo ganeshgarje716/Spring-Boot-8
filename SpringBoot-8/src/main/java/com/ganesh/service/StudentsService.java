@@ -93,5 +93,23 @@ public class StudentsService {
 		
 		return savedStudents;
 	}
+	
+	
+	public Students getStudentById(int id) {
+
+	    Optional<Students> op = repository.findById(id);
+
+	    if(op.isPresent()) {
+	        return op.get();
+	    }
+
+	    return null;
+	}
+	
+	
+	public Students updateStudent(Students student) {
+
+	    return repository.save(student);
+	}
 
 }

@@ -246,6 +246,28 @@ tr:hover{
     }
 }
 
+.edit-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:30px;
+}
+
+.edit-btn{
+    background:#0284c7;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.edit-btn:hover{
+    background:#0369a1;
+}
+
 </style>
 </head>
 <body>
@@ -260,8 +282,8 @@ tr:hover{
         <li><a href="/">Home</a></li>
         <li><a href="/courses">Courses</a></li>
         <li><a href="/students">Students</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Logout</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/logout">Logout</a></li>
         
     </ul>
 
@@ -349,10 +371,19 @@ tr:hover{
                 <td class="fee">₹${student.courseFees}</td>
                 <td>${student.mobileNo}</td>
             </tr>
+            
 
         </table>
+        
 
     </div>
+    
+    <div class="edit-section">
+    <a href="/edit/${student.id}" class="edit-btn">
+        ✏ Edit Profile
+    </a>
+</div>
+    
 
 </section>
 

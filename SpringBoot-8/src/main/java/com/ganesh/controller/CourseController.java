@@ -52,6 +52,26 @@ public class CourseController {
 	}
 	
 	
+	@GetMapping("/edit/{id}")
+	public String editStudent(@PathVariable int id, Model model) {
+
+	    Students student = service.getStudentById(id);
+
+	    model.addAttribute("student", student);
+
+	    return "edit";
+	}
+	
+	
+	@PostMapping("/edit")
+	public String updateStudent(Students student) {
+
+	    Students updatedStudent = service.saveStudent(student);
+
+	    return "redirect:/dashboard/" + updatedStudent.getId();
+	}
+	
+	
 	@GetMapping("/")
 	public String homePage() {
 		
